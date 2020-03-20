@@ -53,7 +53,7 @@ header {
     float: right;
     margin-top: 10px;
     width: 600px;
-    padding: 19px 0;
+    padding: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -80,6 +80,33 @@ header {
     text-decoration: none;
     font-weight: bold;
     color: white;
+    display: inline-block;
+    padding: 19px 0;
+    padding-bottom: 18px;
+    transition: all 0.1s;
+}
+
+.header__top__item a:hover {
+    color: #ffcb78;
+}
+
+.header__top__item a:active {
+    color: rgba(255, 204, 122, 0.3);
+}
+
+.header__top__item a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 19px;
+    transition: all 0.1s;
+}
+
+.header__top__item a:hover:after {
+    background-color: white;
 }
 
 .header__bottom-text {
@@ -189,9 +216,10 @@ header {
     font-weight: bold;
     text-decoration: none;
     float: left;
+    transition: all 0.1s;
 }
 
-.news__button.brown-button {
+.brown-button {
     width: 146px;
     box-sizing: border-box;
     border: 2px solid #834700;
@@ -200,13 +228,31 @@ header {
     margin-right: 7px;
 }
 
-.news__button.white-button {
+.brown-button:hover {
+    border-color: #6a3900;
+    color: #6a3900;
+}
+
+.brown-button:active {
+    border-color: rgba(106, 57, 0, 0.3);
+    color: rgba(106, 57, 0, 0.3);
+}
+
+.white-button {
     width: 109px;
     box-sizing: border-box;
     background-color: #834700;
     color: white;
     padding: 16px 22px;
     margin-right: 25px;
+}
+
+.white-button:hover {
+    background-color: #6a3900;
+}
+
+.white-button:active {
+    color: rgb(255, 255, 255, 0.3);
 }
 
 .news__price {
@@ -334,6 +380,15 @@ header {
 
 .history__item__header i a {
     color: #834700;
+    transition: all 0.1s;
+}
+
+.history__item__header i a:hover {
+    color: #6a3900;
+}
+
+.history__item__header i a:active {
+    color: #cab7a2;
 }
 
 .history__item__body p {
@@ -403,6 +458,18 @@ header {
     font-weight: bold;
     padding: 13px 0;
     padding-left: 20px;
+    transition: all 0.2s;
+}
+
+.smi__item__button:hover {
+    color: white;
+    background-color: #a5a097;
+}
+
+.smi__item__button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #8f8a81;
+    border-color: #8f8a81;
 }
 
 /* PRODUCTS */
@@ -509,6 +576,19 @@ header {
     width: 100%;
     box-sizing: border-box;
     padding-left: 20px;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+.deliver__form input[type="text"]:hover {
+    background-color: #d9ad66;
+}
+
+.deliver__form input[type="text"]:focus {
+    background-color: white;
+    outline: transparent;
 }
 
 .deliver__form label {
@@ -549,6 +629,19 @@ header {
     resize: none;
     border: none;
     background-color: #e5b66c;
+    transition: all 0.1s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+}
+
+.deliver__form-textarea:hover {
+    background-color: #d9ad66;
+}
+
+.deliver__form-textarea:focus {
+    background-color: white;
+    outline: transparent;
 }
 
 .deliver__form-checkbox-block {
@@ -570,6 +663,21 @@ header {
     min-height: 50px;
     padding: 0;
     margin-top: 44px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.deliver__form-button:hover {
+    background-color: #6a3900;
+    border-color: #6a3900;
+}
+
+.deliver__form-button:active,
+.deliver__form-button:focus {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #5c3200;
+    border-color: #5c3200;
+    outline: transparent;
 }
 
 /* FOOTER */
@@ -605,8 +713,6 @@ footer {
 .footer__top__item {
     float: left;
     margin-right: 55px;
-    padding: 20px 0;
-    padding-bottom: 19px;
 }
 
 .footer__top__item:last-child {
@@ -618,6 +724,32 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    display: inline-block;
+    padding: 19px 0;
+    transition: all 0.1s;
+}
+
+.footer__top__item a:hover {
+    color: #ffcb78;
+}
+
+.footer__top__item a:active {
+    color: rgba(255, 204, 122, 0.3);
+}
+
+.footer__top__item a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    transition: all 0.1s;
+}
+
+.footer__top__item a:hover:after {
+    background-color: white;
 }
 
 .footer__bottom {
@@ -633,13 +765,24 @@ footer {
 }
 
 .footer__bottom__social {
+    position: relative;
     display: block;
     width: 70px;
     height: 66px;
     background: #1b1b1b url(../img/icon-insta.png) no-repeat 51% 50%;
     border: 1px solid #322d24;
     float: left;
-    margin-right: -1px;
+    margin-left: -1px;
+    transition: all 0.2s;
+}
+
+.footer__bottom__social:hover {
+    border-color: #605037;
+    z-index: 1;
+}
+
+.footer__bottom__social:active {
+    opacity: 0.5;
 }
 
 .footer__bottom__social-fb {
@@ -672,7 +815,9 @@ footer {
 }
 
 .footer__bottom__made-by-img {
+    position: relative;
     display: block;
+    margin: 0;
     padding-left: 21px;
     padding-top: 16px;
     box-sizing: border-box;
@@ -681,6 +826,16 @@ footer {
     background: #1b1b1b;
     border: 1px solid #322d24;
     float: left;
+    transition: all 0.2s;
+}
+
+.footer__bottom__made-by-img:hover {
+    border-color: #605037;
+    z-index: 1;
+}
+
+.footer__bottom__made-by-img:active {
+    opacity: 0.5;
 }
 
 .footer__bottom__made-by a {
@@ -693,7 +848,6 @@ footer {
     margin-left: 30px;
 }
 
-.footer__bottom__made-by a,
 .footer__bottom__made-by b {
     display: inline-block;
     margin-top: 25px;
