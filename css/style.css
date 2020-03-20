@@ -17,6 +17,17 @@ header {
     background-size: cover;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px; 
+	width: 1px; 
+	overflow: hidden;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -559,4 +570,131 @@ header {
     min-height: 50px;
     padding: 0;
     margin-top: 44px;
+}
+
+/* FOOTER */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 70px;
+    background-color: black;
+}
+
+.footer__top__logo {
+    width: 140px;
+    height: 76px;
+    margin-left: 37px;
+    float: left;
+}
+
+.footer__top__nav {
+    float: left;
+    margin-left: 131px;
+    margin-top: 7px;
+}
+
+.footer__top__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    box-sizing: border-box;
+}
+
+.footer__top__item {
+    float: left;
+    margin-right: 55px;
+    padding: 20px 0;
+    padding-bottom: 19px;
+}
+
+.footer__top__item:last-child {
+    margin-right: 0;
+}
+
+.footer__top__item a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer__bottom {
+    margin-top: 47px;
+}
+
+.footer__bottom__socials {
+    float: left;
+    width: 215px;
+    min-height: 68px;
+    position: relative;
+    left: -1px;
+}
+
+.footer__bottom__social {
+    display: block;
+    width: 70px;
+    height: 66px;
+    background: #1b1b1b url(../img/icon-insta.png) no-repeat 51% 50%;
+    border: 1px solid #322d24;
+    float: left;
+    margin-right: -1px;
+}
+
+.footer__bottom__social-fb {
+    background-image: url(../img/icon-fb.png);
+}
+
+.footer__bottom__social-vk {
+    background-image: url(../img/icon-vk.png);
+}
+
+.footer__bottom__copyright {
+    color: #989898;
+    font-size: 14px;
+    line-height: 20px;
+    width: 200px;
+    float: left;
+    margin: 0;
+    margin-top: 12px;
+    margin-left: 92px;
+}
+
+.footer__bottom__made-by {
+    font-size: 14px;
+    line-height: 20px;
+    color: #989898;
+    font-weight: bold;
+    float: right;
+    width: 298px;
+    margin-right: 10px;
+}
+
+.footer__bottom__made-by-img {
+    display: block;
+    padding-left: 21px;
+    padding-top: 16px;
+    box-sizing: border-box;
+    width: 72px;
+    height: 68px;
+    background: #1b1b1b;
+    border: 1px solid #322d24;
+    float: left;
+}
+
+.footer__bottom__made-by a {
+    color: #989898;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.footer__bottom__made-by b {
+    margin-left: 30px;
+}
+
+.footer__bottom__made-by a,
+.footer__bottom__made-by b {
+    display: inline-block;
+    margin-top: 25px;
 }
